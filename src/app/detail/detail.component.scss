@@ -1,0 +1,18 @@
+.zoomImg{
+    width: 100%;
+    margin: 0 2%;
+}
+.owl-wrapper{
+    overflow: auto;
+    .owl-item{
+        display: inline-block;
+    }
+}
+
+#SimilarProductSlider{
+    opacity: 1;
+    display: block;
+    overflow: auto;
+    width: 99%;
+    white-space: nowrap;
+}

@@ -1,0 +1,52 @@
+<div class="container-fluid main-container" style="padding-top: 25px;">
+    <!--/.row-->
+    <div class="row">
+       <div class="col-lg-9 col-md-9 col-sm-7 col-xs-6 col-xxs-12 text-center-xs">
+          <h3 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</span></h3>
+       </div>
+       <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar col-xs-6 col-xxs-12 text-center-xs">
+          <h6 class="caps"><a href="category.html"><i class="fa fa-chevron-left"></i> Back to shopping </a></h6>
+       </div>
+    </div>
+    <!--/.row-->
+    <div class="row">
+       <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="row userInfo">
+             <div class="col-xs-12 col-sm-12">
+                <div class="w100 clearfix">
+                   <ul class="orderStep orderStepLook2">
+                      <li [class]="currentTabs=='ADD'?'active':''"><a (click)="currentTabs='ADD'"> <i class="fa fa-map-marker "></i> <span> address</span>
+                         </a>
+                      </li>
+                      <li [class]="currentTabs=='BILL'?'active':''"><a (click)="currentTabs='BILL'"> <i class="fa fa fa-envelope  "></i>
+                         <span> Billing </span></a>
+                      </li>
+                      <li [class]="currentTabs=='SHIP'?'active':''"><a (click)="currentTabs='SHIP'"><i class="fa fa-truck "> </i><span>Shipping</span> </a></li>
+                      <li [class]="currentTabs=='PAYMENT'?'active':''"><a (click)="currentTabs='PAYMENT'"><i class="fa fa-money  "> </i><span>Payment</span> </a></li>
+                      <li [class]="currentTabs=='ORDER'?'active':''"><a (click)="currentTabs='ORDER'"><i class="fa fa-check-square "> </i><span>Order</span></a>
+                      </li>
+                   </ul>
+                </div>
+                <div>
+                    <div class="w100 clearfix">
+                     <form class="col-lg-12 row spaceCheckout" id="addressForm" [formGroup]="userDetail" (ngSubmit)="submitFormType(userDetail, currentTabs)">
+                           <app-address *ngIf="currentTabs=='ADD'" [userDetail]="userDetail"></app-address>
+                           <app-billing *ngIf="currentTabs=='BILL'" [userDetail]="userDetail"></app-billing>
+                           <app-shipping *ngIf="currentTabs=='SHIP'" [userDetail]="userDetail"></app-shipping>
+                           <app-payment *ngIf="currentTabs=='PAYMENT'" [userDetail]="userDetail"></app-payment>
+                           <app-order *ngIf="currentTabs=='ORDER'"></app-order>
+                     </form>
+                    </div>
+                    <div class="cartFooter w100">
+                        <app-button-action></app-button-action>
+                    </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-lg-3 col-md-3 col-sm-12 rightSidebar">
+            <app-calculate-price></app-calculate-price>
+       </div>
+    </div>
+    <div style="clear:both"></div>
+ </div>

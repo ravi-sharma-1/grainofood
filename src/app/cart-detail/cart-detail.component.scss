@@ -1,0 +1,21 @@
+.headerOffset{
+    padding-top: 24px;
+    .linkColor{
+        font-size: 18px;
+        font-weight: bold;
+        color:black;
+    }
+    .CartProduct.cartTableBody{
+        height:145px;
+    }
+    .CartProductThumb a img, .CartProductThumb a img {
+        width: 110px;
+        max-width: 100%;
+    }
+    .cartFooter {
+        padding: 10px 20px 10px 0px;
+        background: #EBEDEF;
+        display: inline-block;
+        width: 100%;
+    }
+}

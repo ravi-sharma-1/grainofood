@@ -1,0 +1,231 @@
+<!-- <div class="container-fluid">
+<div class="row">
+    <div class="col-md-8 col-sm12" style="padding:20px 20px 20px 48px;">
+      <div class="row" style="box-shadow: 2px 2px 2px 4px #ccc">
+        <div class="col-md-12 col-sm-12 header-content">
+          <h3 class="section-header">SHOPPING CART</h3>
+        </div>
+        <div class="col-md-12 col-sm-12">
+           <div class="row" style="padding: 36px 0px;">
+              <div class="col-md-3 alignItem" style="padding-left: 30px;"><img class="responsiveImg" src="../../../assets/v1.jpg"></div>
+              <div class="col-md-5 alignItem">
+                <div style="font-size:18px;"><b>Fresh Hydarabadi Mangos</b></div>
+                <div class="contentWeightColor">1KG/2KG/5KG</div>
+                <div class="contentPriceColor">&#x20B9; 50 <span class="badge badge-pill badge-primary">15% Off</span></div>
+              </div>
+              <div class="col-md-2 alignItem"><app-inc-dec [num]="0"></app-inc-dec></div>
+              <div class="col-md-1 alignItem">&#x20B9; 50</div>
+              <div class="col-md-1 alignItem"><i class="fa fa-trash" aria-hidden="true" style="font-size:22px;"></i></div>
+           </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <div class="row" style="padding: 36px 0px;">
+             <div class="col-md-3 alignItem" style="padding-left: 30px;"><img class="responsiveImg" src="../../../assets/v2.jpg"></div>
+             <div class="col-md-5 alignItem">
+               <div style="font-size:18px;"><b>Fresh Hydarabadi Mangos</b></div>
+               <div class="contentWeightColor">1KG/2KG/5KG</div>
+               <div class="contentPriceColor">&#x20B9; 50 <span class="badge badge-pill badge-primary">15% Off</span></div>
+             </div>
+             <div class="col-md-2 alignItem"><app-inc-dec [num]="0"></app-inc-dec></div>
+             <div class="col-md-1 alignItem">&#x20B9; 50</div>
+             <div class="col-md-1 alignItem"><i class="fa fa-trash" aria-hidden="true" style="font-size:22px;"></i></div>
+          </div>
+       </div>
+
+       <div class="col-md-12 col-sm-12">
+        <div class="row" style="padding: 36px 0px;">
+           <div class="col-md-3 alignItem" style="padding-left: 30px;"><img class="responsiveImg" src="../../../assets/v3.jpg"></div>
+           <div class="col-md-5 alignItem">
+             <div style="font-size:18px;"><b>Fresh Hydarabadi Mangos</b></div>
+             <div class="contentWeightColor">1KG/2KG/5KG</div>
+             <div class="contentPriceColor">&#x20B9; 50 <span class="badge badge-pill badge-primary">15% Off</span></div>
+           </div>
+           <div class="col-md-2 alignItem"><app-inc-dec [num]="0"></app-inc-dec></div>
+           <div class="col-md-1 alignItem">&#x20B9; 50</div>
+           <div class="col-md-1 alignItem"><i class="fa fa-trash" aria-hidden="true" style="font-size:22px;"></i></div>
+        </div>
+     </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12" style="padding: 20px 32px 20px 13px;">
+        <div style="box-shadow: 2px 2px 2px 4px #ccc">
+         <span style="margin-left:23px;color:#ddd;font-weight:bold;display:block;padding-top:10px;">3 items</span>
+         <span style="margin-left:23px;color:orange;font-weight:bold;display:block;font-size:18px;">Show Details</span>
+         <div class="row rightSidePane">
+          <div class="col-md-6">Subtotals<br>Shipping</div>
+          <div class="col-md-6">&#x20B9; 150 <br>&#x20B9; 20</div>
+         </div>
+         <div class="row rightSidePane">
+          <div class="col-md-6">Total(tax excl.)<br>Taxes</div>
+          <div class="col-md-6">&#x20B9; 170 <br>&#x20B9; 0</div>
+         </div>
+         <div class="col-md-12" style="padding:20px; text-align:center;"> 
+           <button class="btn btn-secondary">PROCEED TO CHECKOUT</button>
+         </div>
+         </div>
+    </div>
+    <a href="" style="margin-left: 31px;margin-bottom:10px;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Continue shopping</a>
+</div>
+
+</div> -->
+<div class="pace-done">
+    <div class="container-fluid main-container headerOffset">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-7 col-xs-6 col-xxs-12 text-center-xs">
+                <h3 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> Shopping cart </span></h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar col-xs-6 col-xxs-12 text-center-xs">
+                <h6 class="caps"><a href="category.html"><i class="fa fa-chevron-left"></i> Back to shopping </a></h6>
+            </div>
+        </div>
+    <div class="row ">
+    <div class="col-lg-9 col-md-9 col-sm-7">
+        <div class="row userInfo">
+            <div class="col-xs-12 col-sm-12">
+                <div class="cartContent w100">
+                    <table class="cartTable table-responsive" style="width:100%">
+                        <tbody>
+
+                        <tr class="CartProduct cartTableHeader">
+                            <td style="width:15%"> Product</td>
+                            <td style="width:40%">Details</td>
+                            <td style="width:10%" class="delete">&nbsp;</td>
+                            <td style="width:10%">QNT</td>
+                            <td style="width:10%">Discount</td>
+                            <td style="width:15%">Total</td>
+                        </tr>
+
+                        <tr class="CartProduct cartTableBody">
+                            <td class="CartProductThumb">
+                                <div><a href="product-details.html"><img src="../../../assets/v1.jpg" alt="img"></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="CartDescription">
+                                    <a href="product-details.html" class="linkColor">Denim T shirt Black </a><br>
+                                    <span class="size">12 x 1.5 L</span>
+
+                                    <div class="price"><span>&#x20B9;8.80</span></div>
+                                </div>
+                            </td>
+                            <td class="delete"><a title="Delete"><i class="fa fa-trash" style="font-size:25px;"></i></a></td>
+                            <td><div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix"></span><input class="quanitySniper form-control" type="text" value="2" name="quanitySniper"><span class="input-group-addon bootstrap-touchspin-postfix"></span><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-up" type="button">+</button></span></div></td>
+                            <td>0</td>
+                            <td class="price">&#x20B9;300</td>
+                        </tr>
+
+                        <tr class="CartProduct cartTableBody">
+                            <td class="CartProductThumb">
+                                <div><a href="product-details.html"><img src="../../../assets/v2.jpg" alt="img"></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="CartDescription">
+                                    <a href="product-details.html" class="linkColor">Denim T shirt Black </a><br>
+                                    <span class="size">12 x 1.5 L</span>
+
+                                    <div class="price"><span>&#x20B9;30</span></div>
+                                </div>
+                            </td>
+                            <td class="delete"><a title="Delete"> <i class="fa fa-trash" style="font-size:25px;"></i></a></td>
+                            <td><div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix"></span><input class="quanitySniper form-control" type="text" value="2" name="quanitySniper"><span class="input-group-addon bootstrap-touchspin-postfix"></span><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-up" type="button">+</button></span></div></td>
+                            <td>0</td>
+                            <td class="price">&#x20B9;60</td>
+                        </tr>
+
+                        <tr class="CartProduct cartTableBody">
+                            <td class="CartProductThumb">
+                                <div>
+                                    <a href="product-details.html"><img src="../../../assets/v3.jpg" alt="img"></a>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="CartDescription">
+                                    <a href="product-details.html" class="linkColor">Denim T shirt Black </a><br>
+                                    <span class="size">12 x 1.5 L</span>
+
+                                    <div class="price"><span>&#x20B9;8.80</span></div>
+                                </div>
+                            </td>
+                            <td class="delete"><a title="Delete"> <i class="fa fa-trash" style="font-size:25px;"></i></a></td>
+                            <td><div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix"></span><input class="quanitySniper form-control" type="text" value="2" name="quanitySniper"><span class="input-group-addon bootstrap-touchspin-postfix"></span><span class="input-group-btn"><button class="btn btn-link bootstrap-touchspin-up" type="button">+</button></span></div></td>
+                            <td>0</td>
+                            <td class="price">&#x20B9;60</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--cartContent-->
+
+                <div class="cartFooter w100">
+                    <div class="box-footer">
+                        <div class="pull-left"><a href="index.html" class="btn btn-default"> <i class="fa fa-arrow-left"></i> &nbsp; Continue shopping </a></div>
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-undo"></i> &nbsp; Update
+                                cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--/ cartFooter -->
+
+            </div>
+        </div>
+        <!--/row end-->
+
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar">
+        <div class="contentBox">
+            <div class="w100 costDetails">
+                <div class="table-block" id="order-detail-content"><a class="btn btn-secondary btn-lg btn-block " title="checkout" href="checkout-0.html" style="margin-bottom:20px"> Proceed to
+                    checkout &nbsp; <i class="fa fa-arrow-right"></i> </a>
+
+                    <div class="w100 cartMiniTable">
+                        <table id="cart-summary" class="std table">
+                            <tbody>
+                            <tr>
+                                <td>Total products</td>
+                                <td class="price">&#x20B9;216.51</td>
+                            </tr>
+                            <tr style="">
+                                <td>Shipping</td>
+                                <td class="price"><span class="success">Free shipping!</span></td>
+                            </tr>
+                            <tr class="cart-total-price ">
+                                <td>Total (tax excl.)</td>
+                                <td class="price">&#x20B9;216.51</td>
+                            </tr>
+                            <tr>
+                                <td>Total tax</td>
+                                <td class="price" id="total-tax">&#x20B9;0.00</td>
+                            </tr>
+                            <tr>
+                                <td> Total</td>
+                                <td class=" site-color" id="total-price">&#x20B9;216.51</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="input-append couponForm">
+                                        <input class="col-lg-8" id="appendedInputButton" type="text" placeholder="Coupon code">
+                                        <button class="col-lg-4 btn btn-success" type="button">Apply!</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End popular -->
+
+    </div>
+    <!--/rightSidebar-->
+
+    </div>
+    </div>
+</div>

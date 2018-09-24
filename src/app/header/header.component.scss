@@ -1,0 +1,68 @@
+.headerBarContianer{
+    position: sticky;
+    top: 0;
+    z-index: 333;
+    .cartBedge{
+        position: absolute;
+        margin-top: -12px;
+        margin-left: -27px;
+        background: red;
+        color: #fff;
+        width: 20px;
+        border-radius: 50%;
+        height: 20px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .miniCartFooter .subtotal {
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        line-height: 0.5;
+        padding-top: 8px;
+    }
+    .numtimes{
+        display: block;
+        width: 89px;
+        margin-top: 10px;
+    }
+    .bar-bg{
+        background: #e1b3b3;
+    }
+    .adjustSettings{
+        position: relative;
+        top:5px;
+    }
+    .searchIcons{
+        color: #e1b3b3;
+    }
+    .inputsearch{
+        background: #c26969;
+        color: #fff;
+        outline: 0px;
+    }
+    .inputsearch:focus{
+        outline-style:none;
+        box-shadow:none;
+        border-color:transparent;
+    }
+    ::placeholder {
+        color: #fff !important;
+    }
+    .logo { 
+        /* The image used */
+        background-image: url("/../assets/graino-food1.png");
+    
+        /* Full height */
+        width:200px;
+        height:60px;
+        background-size:200px 60px; 
+    
+        /* Center and scale the image nicely */
+        background-repeat: no-repeat;
+    }
+}

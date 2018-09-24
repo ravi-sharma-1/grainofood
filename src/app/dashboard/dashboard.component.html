@@ -1,0 +1,46 @@
+<div class="dbContainer">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/graino-food-wheet-1.jpg" class="dbBanner" alt="Los Angeles">
+          </div>
+          <div class="carousel-item">
+              <img src="../../assets/graino-food-rice-1.jpg" class="dbBanner" alt="Los Angeles">
+          </div>
+          <div class="carousel-item">
+              <img src="../../assets/fruit-graino-food.jpg" class="dbBanner" alt="Los Angeles">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div >
+       <div *ngFor="let itemKeys of genericCardKeys" class="cardContainer">
+            <div>
+                <h3 class="section-title style2 text-center">
+                    <span class="section-header">{{cardDetails[itemKeys].title}}</span>
+                    <span class="borderSmBg"></span>
+                </h3>
+            </div>
+            <!-- <app-product-slider  [cardData]="cardDetails[itemKeys].data"></app-product-slider> -->
+             <!-- <app-cardsforslider></app-cardsforslider> -->
+             <app-slider>
+                <app-cardsforslider [cardData]="cardDetails[itemKeys].data"></app-cardsforslider>
+             </app-slider>
+        </div>
+  </div>

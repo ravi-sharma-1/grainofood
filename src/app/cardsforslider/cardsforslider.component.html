@@ -1,0 +1,26 @@
+<div id="productDetail">
+  <div class="owl-item" style="width: 293px;" *ngFor="let cardDetail of cardData"><div class="item">
+    <div class="product">
+        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
+            <i class="glyphicon glyphicon-heart"></i>
+        </a>
+
+        <div class="image">
+            <div class="quickview">
+                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax/product.html" data-target="#productSetailsModalAjax">Quick View </a>
+            </div>
+            <a href="product-details.html"><img src="{{cardDetail.url}}" alt="img" class="img-responsive"></a>
+
+            <div class="promotion"><span class="new-product"> {{cardDetail.type}}</span> <span class="discount">{{cardDetail.discount}} OFF</span></div>
+        </div>
+        <div class="description">
+            <h4><a href="product-details.html">{{cardDetail.descriptionTitle}} </a></h4>
+
+            <p>{{cardDetail.description}} </p>
+            <span class="size">{{cardDetail.quantity}} </span></div>
+        <div class="price"><span>&#8377;{{cardDetail.price}}</span></div>
+        
+        <div class="action-control"><a class="btn colorToAll" (click)="cartService.addToCart(cardDetail)"> <span class="add2cart"><i  class="material-icons adpos">shopping_cart </i> Add</span> </a></div>
+    </div>
+</div></div>
+</div>

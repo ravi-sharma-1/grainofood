@@ -1,0 +1,31 @@
+<div class="container loginMain">
+    <div>
+      <h1 class="text-center">Welcome to GrainoBuyer</h1>
+    </div>
+    <form [formGroup]="loginForm" class="login container" (ngSubmit)="submitLoginForm(loginForm)">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h4 class="login-label text-center">Sign In</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12  form-group">
+          <label for="user">User Name:</label>
+          <input type="text" [placeholder]="userPlaceHolder" [disabled]="userPlaceHolder" class="form-control" formControlName="userName" id="user" />
+          <!--{{console.log(loginForm.controls.userName.hasError('required'))}} see the error object and place properties -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12  form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" formControlName="pwd"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 form-group">
+          <input type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" value="Submit" />
+        </div>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,97 @@
+<div class="headerBarContianer">
+  <nav class="navbar navbar-expand-sm bar-bg navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand logo" href=""></a>
+  <div class="input-group col-md-6 col-sm-12">
+      <input type="text" class="form-control inputsearch" placeholder="Search for Grains Brand or More" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2"><i class="material-icons searchIcons">
+            search
+            </i></span>
+      </div>
+  </div>
+  <!-- Links -->
+  <ul class="navbar-nav" style="margin-left: auto;">
+      <li class="nav-item dropdown">
+          <a class="nav-link" style="cursor:pointer;"  data-toggle="dropdown">
+            <i class="material-icons adjustSettings">
+              shopping_cart
+              </i> <span class="cartBedge" *ngIf="totalItems">{{totalItems && totalItems}}</span> Cart 
+          </a>
+          <app-menuitems id="navbardrop1"  *ngIf="cartData && cartData.cartDetail.length">
+            <div style="width: 329px;" >
+            <div class="cartMenu" style="width:100%">
+              <div class="w100 miniCartTable scroll-pane mCustomScrollbar _mCS_2" style="overflow: hidden;"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_2" style="position: relative; height: 100%; overflow-x: hidden; max-width: 100%; max-height: 300px;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative;/* top:0; */">
+                  <table>
+                      <tbody>
+                      <tr class="miniCartProduct" *ngFor="let cartItem of cartData.cartDetail;let i = index">
+                                <td style="width:20%" class="miniCartProductThumb">
+                                    <div *ngIf="checkIfArray(cartItem); else sec1"><a href="product-details.html"> <img [src]="cartItem[0].url" alt="img">
+                                    </a></div>
+                                    <ng-template #sec1><a href="product-details.html"> <img [src]="cartItem.url" alt="img">
+                                    </a></ng-template>
+                                </td>
+                                <td style="width:40%">
+                                    <div class="miniCartDescription" *ngIf="checkIfArray(cartItem); else sec2">
+                                        <h4><a href="product-details.html"> {{cartItem[0].descriptionTitle}} </a></h4>
+                                        <span class="size"> {{cartItem[0].quantity}} </span>
+
+                                        <div class="price"><span> &#x20B9;{{cartItem[0].price}} </span></div>
+                                    </div>
+                                    <ng-template #sec2>
+                                    <div class="miniCartDescription">
+                                            <h4><a href="product-details.html"> {{cartItem.descriptionTitle}} </a></h4>
+                                            <span class="size"> {{cartItem.quantity}} </span>
+    
+                                            <div class="price"><span> &#x20B9;{{cartItem.price}} </span></div>
+                                        </div>
+                                    </ng-template>
+                                </td>
+                                <td style="width:10%" class="miniCartQuantity"><a *ngIf="checkIfArray(cartItem); else sec3" class="numtimes"><app-inc-dec [num]="cartItem.length" maxLimit="40" minLimit="1" [data]="cartItem[0]" (handleNumOut)="handleOutputData($event);"></app-inc-dec> </a><ng-template #sec3><a class="numtimes"> <app-inc-dec [num]="1"  maxLimit="40" minLimit="1" [data]="cartItem" (handleNumOut)="handleOutputData($event);"></app-inc-dec> </a></ng-template></td>
+                                <td style="width:15%" class="miniCartSubtotal"><span *ngIf="checkIfArray(cartItem); else sec4">&#x20B9;{{cartItem[0].price* cartItem.length}} </span><ng-template #sec4><span>&#x20B9;{{cartItem.price}} </span></ng-template></td>
+                                <td style="width:5%" class="delete"><a (click)="cartService.completeRemove(i)"> x </a></td>
+                      </tr>         
+                      </tbody>
+                  </table>
+              </div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px; height: 194px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 194px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+              <!--/.miniCartTable-->
+
+              <div class="miniCartFooter text-right">
+                  <h3 class="text-right subtotal"> Subtotal: &#x20B9;{{findTotal()}} </h3>
+                  <a class="btn btn-sm btn-danger" routerLink="/home/viewCart"> <i class="fa fa-shopping-cart"> </i> VIEW
+                      CART </a><a class="btn btn-sm btn-primary"> CHECKOUT </a></div>
+              <!--/.miniCartFooter-->
+
+          </div>
+        </div>
+          </app-menuitems>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+            <i class="material-icons adjustSettings">
+              apps
+              </i> More 
+          </a>
+          <app-menuitems>
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </app-menuitems>
+        </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <i class="material-icons adjustSettings">
+          settings_applications
+          </i> User Settings
+      </a>
+      <app-menuitems>
+        <a class="dropdown-item" href="#">Yes</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </app-menuitems>
+    </li>
+
+   
+  </ul>
+</nav>
+</div>
